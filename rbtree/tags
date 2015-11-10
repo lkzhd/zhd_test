@@ -1,0 +1,61 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+LIBAVL_ALLOCATOR	rb.h	14;"	d
+RB_BLACK	rb.h	/^        RB_BLACK,$/;"	e	enum:rb_color
+RB_H	rb.h	2;"	d
+RB_MAX_HEIGHT	rb.h	27;"	d
+RB_RED	rb.h	/^        RB_RED$/;"	e	enum:rb_color
+libavl_allocator	rb.h	/^struct libavl_allocator {$/;"	s
+libavl_free	rb.h	/^        void (libavl_free) (struct libavl_allocator *, void *libavl_block);$/;"	p	struct:libavl_allocator
+libavl_malloc	rb.h	/^        void *(*libavl_malloc) (struct libavl_allocator *, size_t libavl_size);$/;"	m	struct:libavl_allocator
+rb_alloc	rb.h	/^        struct libavl_allocator *rb_alloc;$/;"	m	struct:rb_table	typeref:struct:rb_table::libavl_allocator
+rb_allocator_default	rb.c	/^struct libavl_allocator rb_allocator_default = {$/;"	v	typeref:struct:libavl_allocator
+rb_allocator_default	rb.h	/^extern struct libavl_allocator rb_allocator_default;$/;"	x
+rb_assert_insert	rb.h	/^void rb_assert_insert (struct rb_table *, void *);$/;"	p
+rb_color	rb.h	/^        unsigned char           rb_color;$/;"	m	struct:rb_node
+rb_color	rb.h	/^enum rb_color {$/;"	g
+rb_compare	rb.h	/^        rb_comparison_func      *rb_compare;$/;"	m	struct:rb_table
+rb_comparison_func	rb.h	/^typedef int rb_comparison_func (const void *rb_a, const void *rb_b,$/;"	t
+rb_copy	rb.h	/^struct rb_table *rb_copy (const struct rb_table *,rb_copy_func *,$/;"	p
+rb_copy_func	rb.h	/^typedef void *rb_copy_func (void *rb_item, void *rb_param);$/;"	t
+rb_count	rb.h	/^        size_t                  rb_count;$/;"	m	struct:rb_table
+rb_create	rb.c	/^rb_create (rb_comparison_func *compare, void *param,$/;"	f
+rb_create	rb.h	/^struct rb_table *rb_create (rb_comparison_func *, void *,$/;"	p
+rb_data	rb.h	/^        void                    *rb_data;$/;"	m	struct:rb_node
+rb_delete	rb.h	/^void *rb_delete (struct rb_table *, const void *);$/;"	p
+rb_destroy	rb.h	/^void rb_destroy (struct rb_table *, rb_item_func *);$/;"	p
+rb_find	rb.h	/^void *rb_find (const struct rb_table *,const void *);$/;"	p
+rb_free	rb.c	/^void rb_free (struct libavl_allocator *allocator, void *block)$/;"	f
+rb_free	rb.h	/^void rb_free (struct libavl_allocator *, void *);$/;"	p
+rb_generation	rb.h	/^        unsigned long           rb_generation;$/;"	m	struct:rb_table
+rb_generation	rb.h	/^    unsigned long               rb_generation;$/;"	m	struct:rb_traverser
+rb_insert	rb.h	/^void *rb_insert (struct rb_table *,void *);$/;"	p
+rb_item_func	rb.h	/^typedef void rb_item_func (void *rb_item, void *rb_param);$/;"	t
+rb_link	rb.h	/^        struct rb_node          *rb_link[2];$/;"	m	struct:rb_node	typeref:struct:rb_node::rb_node
+rb_malloc	rb.c	/^rb_malloc (struct libavl_allocator *allocator, size_t size)$/;"	f
+rb_malloc	rb.h	/^void *rb_malloc (struct libavl_allocator *, size_t);$/;"	p
+rb_node	rb.h	/^    struct rb_node              *rb_node;$/;"	m	struct:rb_traverser	typeref:struct:rb_traverser::rb_node
+rb_node	rb.h	/^struct rb_node {$/;"	s
+rb_param	rb.h	/^        void                    *rb_param;$/;"	m	struct:rb_table
+rb_probe	rb.h	/^void **rb_probe (struct rb_table *, void *);$/;"	p
+rb_rb_height	rb.h	/^    size_t                      rb_rb_height;$/;"	m	struct:rb_traverser
+rb_replace	rb.h	/^void *rb_replace (struct rb_table *, void *);$/;"	p
+rb_root	rb.h	/^        struct rb_node          *rb_root;$/;"	m	struct:rb_table	typeref:struct:rb_table::rb_node
+rb_stack	rb.h	/^    struct rb_node              *rb_stack[RB_MAX_HEIGHT];$/;"	m	struct:rb_traverser	typeref:struct:rb_traverser::rb_node
+rb_t_copy	rb.h	/^void *rb_t_copy (struct rb_traverser *, struct rb_traverser *);$/;"	p
+rb_t_cur	rb.h	/^void *rb_t_cur (struct rb_traverser *);$/;"	p
+rb_t_find	rb.h	/^void *rb_t_find (struct rb_traverser *, struct rb_table *, void *);$/;"	p
+rb_t_first	rb.h	/^void *rb_t_first (struct rb_traverser *, struct rb_table *);$/;"	p
+rb_t_init	rb.h	/^void rb_t_init (struct rb_traverser *, struct rb_table *);$/;"	p
+rb_t_insert	rb.h	/^void *rb_t_insert (struct rb_traverser *, struct rb_table *, void *);$/;"	p
+rb_t_last	rb.h	/^void *rb_t_last (struct rb_traverser *, struct rb_table *);$/;"	p
+rb_t_next	rb.h	/^void *rb_t_next (struct rb_traverser *);$/;"	p
+rb_t_prev	rb.h	/^void *rb_t_prev (struct rb_traverser *);$/;"	p
+rb_t_replace	rb.h	/^void *rb_t_replace (struct rb_traverser *, void *);$/;"	p
+rb_table	rb.h	/^    struct rb_table             *rb_table;$/;"	m	struct:rb_traverser	typeref:struct:rb_traverser::rb_table
+rb_table	rb.h	/^struct rb_table {$/;"	s
+rb_traverser	rb.h	/^struct rb_traverser {$/;"	s
